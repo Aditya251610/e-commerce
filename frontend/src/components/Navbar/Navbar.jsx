@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import './Navbar.css';
 import logo from '../assets/logo.png';
 import cart_icon from '../assets/cart_icon.png'
@@ -10,6 +10,12 @@ const Navbar = () => {
 
     const [menu, setMenu] = useState("Shop");
     const {getTotalItem} = useContext(ShopContext);
+    const menuRef = useRef();
+
+    const dropdown_toggle = (e) =>{
+        menuRef.current.classList.toggle('nav-menu-visible');
+        e.target.classList.toggle('open');
+    }
 
   return (
     <div className='navbar'>
@@ -17,7 +23,8 @@ const Navbar = () => {
             <img src={logo} alt='logo' />
             <p>SHOPPER</p>
         </div>
-        <ul className='nav-menu'>
+        
+        <ul ref={menuRef} className='nav-menu'>
             <li onClick={() =>{setMenu("Shop")}}><Link style={{textDecoration: "none"}} to='/'>Shop</Link>{menu==="Shop"?<hr />:null}</li>
             <li onClick={() =>{setMenu("Men")}}><Link style={{textDecoration: "none"}} to='/men'>Men</Link>{menu==="Men"?<hr />:null}</li>
             <li onClick={() =>{setMenu("Women")}}><Link style={{textDecoration: "none"}} to='/women'>Women</Link>{menu==="Women"?<hr />:null}</li>
@@ -28,6 +35,7 @@ const Navbar = () => {
             <Link to='/cart'><img src={cart_icon} alt='car-icon' /></Link>
             <div className='nav-cart-count'>{getTotalItem()}</div>
         </div>
+        <img onClick={dropdown_toggle} className='nav-dropdown' src="https://cdn-icons-png.flaticon.com/512/60/60995.png" alt='dropdown-img' />
     </div>
   )
 }
