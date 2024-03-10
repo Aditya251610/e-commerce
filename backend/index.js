@@ -208,6 +208,24 @@ app.post('/login', async(req, res) =>{
     } else{
         res.json({success:false, error:"Wrong email id"})
     }
+});
+
+// creting end point for new collection data
+
+app.get('/newcollection', async(req, res) =>{
+    let products = await Product.find({});
+    let newcollection = products.slice(1).slice(-8);
+    console.log("New Collection fetched");
+    res.send(newcollection);
+})
+
+// creating endpoint for popular in women section
+
+app.get('/popularinwomen', async (req, res) =>{
+    let products = await Product.find({category:"women"});
+    let popular_in_women = products.slice(0,4);
+    console.log("Popular in women fetched");
+    res.send(popular_in_women);
 })
 
 app.listen(port,(error)=>{
