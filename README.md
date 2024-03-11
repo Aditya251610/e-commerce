@@ -37,13 +37,13 @@ During the development of this project, I gained knowledge in the following area
       npm install
       node ./index.js
 
-5. Navigate to the frontend folder:
+5. Run the following command to run frontend:
    ```
    cd frontend
    npm install
    npm run dev
 
-6. Navigate to the admin folder:
+6. Run following command to run admin:
    ```
    cd admin
    npm install
