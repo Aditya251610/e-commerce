@@ -29,7 +29,7 @@ During the development of this project, I gained knowledge in the following area
 
 1. Clone the repository using the following command:
    ```
-   git clone https://github.com/Aditya251610/e-commerce.git```
+   git clone https://github.com/Aditya251610/e-commerce.git
 
 3. Run the following command to run backend:
    ```
