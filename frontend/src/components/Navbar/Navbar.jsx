@@ -35,7 +35,7 @@ const Navbar = () => {
             ?<button onClick={()=>{localStorage.removeItem('auth-token');window.location.replace('/')}}>Logout</button>
             :<Link to='/login'><button>Login</button></Link>}
             
-            <Link to='/cart'><img src={cart_icon} alt='car-icon' /></Link>
+            <Link to='/cart'><img src={cart_icon} alt='cart-icon' /></Link>
             <div className='nav-cart-count'>{getTotalItem()}</div>
         </div>
         <img onClick={dropdown_toggle} className='nav-dropdown' src="https://cdn-icons-png.flaticon.com/512/60/60995.png" alt='dropdown-img' />
