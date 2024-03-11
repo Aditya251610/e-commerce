@@ -28,33 +28,23 @@ During the development of this project, I gained knowledge in the following area
 ## How to Run the Project
 
 1. Clone the repository using the following command:
-   git clone https://github.com/Aditya251610/e-commerce.git
+   ```
+   git clone https://github.com/Aditya251610/e-commerce.git```
 
-2. Run the following command to run backend:
+3. Run the following command to run backend:
+   ```
       cd backend
       npm install
       node ./index.js
 
-3. Navigate to the frontend folder:
-   ```bash
-   cd frontend```
-   
-   >Install dependencies:
-   ```bash
-   npm install```
+5. Navigate to the frontend folder:
+   ```
+   cd frontend
+   npm install
+   npm run dev
 
-   >Start the backend server:
-   ```bash
-   npm run dev```
-
-4. Navigate to the admin folder:
-   ```bash
-   cd admin```
-   
-   >Install dependencies:
-   ```bash
-   npm install```
-
-   >Start the backend server:
-   ```bash
+6. Navigate to the admin folder:
+   ```
+   cd admin
+   npm install
    npm run dev```
