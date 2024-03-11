@@ -31,17 +31,10 @@ During the development of this project, I gained knowledge in the following area
    ```bash
    git clone https://github.com/Aditya251610/e-commerce.git````
 
-2. Navigate to the backend folder:
-   ```bash
-   cd backend```
-   
-   >Install dependencies:
-   ```bash
-   npm install```
-
-   >Start the backend server:
-   ```bash
-   node ./index.js```
+2. Run the following command to run backend:
+   ```cd backend
+      npm install
+      node ./index.js```
 
 3. Navigate to the frontend folder:
    ```bash
